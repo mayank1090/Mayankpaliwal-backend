@@ -11,8 +11,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(cors());
 const mongoUri =
-  process.env.MONGO_URI ||
-  'mongodb+srv://dhotar10:dhotar10@cluster0.vcqdvki.mongodb.net/test?retryWrites=true&w=majority';
+  process.env.MONGO_URI;
 
 mongoose
   .connect(mongoUri, {
