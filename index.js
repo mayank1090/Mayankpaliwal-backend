@@ -10,6 +10,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8000;
 app.use(cors());
+app.use(express.json())
 
 mongoose
   .connect("mongodb+srv://dhotar10:dhotar10@cluster0.vcqdvki.mongodb.net/test?retryWrites=true&w=majority", {
